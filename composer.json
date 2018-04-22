@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0",
+        "yiisoft/yii2": "2.1.x-dev",
         "npm-asset/yii2-pjax": "~2.0"
     },
     "autoload": {

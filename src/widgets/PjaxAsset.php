@@ -1,0 +1,35 @@
+<?php
+/**
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ */
+
+namespace albertborsos\pjax\widgets;
+
+use yii\jquery\YiiAsset;
+use yii\web\AssetBundle;
+
+/**
+ * This asset bundle provides the javascript files required by [[Pjax]] widget.
+ *
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @since 2.0
+ */
+class PjaxAsset extends AssetBundle
+{
+    /**
+     * {@inheritdoc}
+     */
+    public $sourcePath = '@npm/yii2-pjax';
+
+    /**
+     * {@inheritdoc}
+     */
+    public $js = ['jquery.pjax.js',];
+
+    /**
+     * {@inheritdoc}
+     */
+    public $depends = [YiiAsset::class];
+}
