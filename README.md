@@ -27,6 +27,30 @@ or add
 
 to the require section of your `composer.json` file.
 
+Usage
+-----
+
+Use the pjax compatible request and response classes in your application's `web.php` configuration file:
+
+```php
+<?php
+
+return [
+    ...
+    'components' =>[
+        ...
+        'request' => [
+            '__class' => \albertborsos\pjax\web\Request::class,
+        ],
+        'response' => [
+            '__class' => \albertborsos\pjax\web\Response::class,
+        ],
+        ...
+    ],
+    ...
+];
+
+```
 
 Documentation
 -------------
