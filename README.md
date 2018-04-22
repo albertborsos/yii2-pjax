@@ -5,6 +5,7 @@
 Yii 2.1 pjax extension
 ======================
 Yii 2.0 Pjax widget is deprecated in Yii 2.1
+
 Classes in this extension are copied from Yii 2.0 repository and updated to be compatible with Yii 2.1
 
 Installation
