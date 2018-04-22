@@ -20,7 +20,8 @@
         "codeception/specify": " *",
         "codeception/verify": " *",
         "codeception/mockery-module": "^0.2.2",
-        "mito/yii2-coding-standards": "~2.0.0@beta"
+        "mito/yii2-coding-standards": "~2.0.0@beta",
+        "satooshi/php-coveralls": "~1.0"
     },
     "autoload": {
         "psr-4": {
