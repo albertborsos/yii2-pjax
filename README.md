@@ -4,7 +4,8 @@
 
 Yii 2.1 pjax extension
 ======================
-pjax extension for Yii 2.1
+Yii 2.0 Pjax widget is deprecated in Yii 2.1
+Classes in this extension are copied from Yii 2.0 repository and updated to be compatible with Yii 2.1
 
 Installation
 ------------
@@ -14,22 +15,19 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist albertborsos/yii2-pjax "*"
+composer install --prefer-dist albertborsos/yii2-pjax
 ```
 
 or add
 
 ```
-"albertborsos/yii2-pjax": "*"
+"albertborsos/yii2-pjax": "1.0.x-dev"
 ```
 
 to the require section of your `composer.json` file.
 
 
-Usage
------
+Documentation
+-------------
 
-Once the extension is installed, simply use it in your code by  :
-
-```php
-<?= \albertborsos\pjax\AutoloadExample::widget(); ?>```
+https://www.yiiframework.com/doc/api/2.0/yii-widgets-pjax
