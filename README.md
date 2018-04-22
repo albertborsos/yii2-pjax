@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/albertborsos/yii2-pjax.svg?branch=master)](https://travis-ci.org/albertborsos/yii2-pjax)
 
-[![Coverage Status](https://coveralls.io/repos/github/albertborsos/yii2-pjax/badge.svg?branch=master)](https://coveralls.io/github/albertborsos/yii2-pjax?branch=master)
-
 Yii 2.1 pjax extension
 ======================
 pjax extension for Yii 2.1
