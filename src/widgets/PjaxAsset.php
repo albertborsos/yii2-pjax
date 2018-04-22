@@ -7,7 +7,6 @@
 
 namespace albertborsos\pjax\widgets;
 
-use yii\jquery\YiiAsset;
 use yii\web\AssetBundle;
 
 /**
@@ -26,10 +25,10 @@ class PjaxAsset extends AssetBundle
     /**
      * {@inheritdoc}
      */
-    public $js = ['jquery.pjax.js',];
+    public $js = ['jquery.pjax.js'];
 
     /**
      * {@inheritdoc}
      */
-    public $depends = [YiiAsset::class];
+    public $depends = [\yii\jquery\YiiAsset::class];
 }

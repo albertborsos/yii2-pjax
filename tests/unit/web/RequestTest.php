@@ -19,8 +19,7 @@ class RequestTest extends TestCase
     {
         return [
             [
-                [
-                ],
+                [],
                 false,
             ],
             [

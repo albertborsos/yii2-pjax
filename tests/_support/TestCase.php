@@ -198,6 +198,6 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
      */
     public function assertIsOneOf($actual, array $expected, $message = '')
     {
-        self::assertThat($actual, new IsOneOfAssert($expected), $message);
+        static::assertThat($actual, new IsOneOfAssert($expected), $message);
     }
 }

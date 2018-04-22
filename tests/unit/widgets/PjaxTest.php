@@ -50,7 +50,7 @@ class PjaxTest extends TestCase
             [
                 'on init' => function () use (&$initTriggered) {
                     $initTriggered = true;
-                }
+                },
             ]
         );
         ob_end_clean();
