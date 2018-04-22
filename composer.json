@@ -1,0 +1,23 @@
+{
+    "name": "albertborsos/yii2-pjax",
+    "description": "pjax extension for Yii 2.1",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Albert Borsos",
+            "email": "hello@borsosalbert.hu"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0",
+        "npm-asset/yii2-pjax": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "albertborsos\\pjax\\": "src/",
+            "albertborsos\\pjax\\tests\\": "tests/"
+        }
+    }
+}
