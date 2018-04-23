@@ -52,6 +52,10 @@ return [
 
 ```
 
+### Or
+
+You can use your own `Request` and `Response` classes with the mandatory interfaces (`\albertborsos\pjax\interfaces\RequestInterface` and `\albertborsos\pjax\interfaces\ResponseInterface`) and with the optional traits (`\albertborsos\pjax\traits\RequestTrait` and `\albertborsos\pjax\traits\ResponseTrait`).
+
 Documentation
 -------------
 
