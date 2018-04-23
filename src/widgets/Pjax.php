@@ -7,7 +7,10 @@
 
 namespace albertborsos\pjax\widgets;
 
+use albertborsos\pjax\interfaces\RequestInterface;
+use albertborsos\pjax\interfaces\ResponseInterface;
 use Yii;
+use yii\base\InvalidConfigException;
 use yii\base\Widget;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -107,13 +110,13 @@ class Pjax extends Widget
      */
     public static $autoIdPrefix = 'p';
 
-
     /**
      * {@inheritdoc}
      */
     public function init()
     {
         parent::init();
+        $this->checkRequirements();
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
@@ -211,6 +214,22 @@ class Pjax extends Widget
 
         if ($js !== '') {
             $view->registerJs($js);
+        }
+    }
+
+    /**
+     * @throws InvalidConfigException
+     */
+    private function checkRequirements()
+    {
+        $request = Yii::$app->getRequest();
+        if (!$request instanceof RequestInterface) {
+            throw new InvalidConfigException('The "request" component must implements "albertborsos\pjax\interfaces\RequestInterface" interface');
+        }
+
+        $response = Yii::$app->getResponse();
+        if (!$response instanceof ResponseInterface) {
+            throw new InvalidConfigException('The "response" component must implements "albertborsos\pjax\interfaces\ResponseInterface" interface');
         }
     }
 }

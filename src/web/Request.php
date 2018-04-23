@@ -2,14 +2,10 @@
 
 namespace albertborsos\pjax\web;
 
-class Request extends \yii\web\Request
+use albertborsos\pjax\interfaces\RequestInterface;
+use albertborsos\pjax\traits\RequestTrait;
+
+class Request extends \yii\web\Request implements RequestInterface
 {
-    /**
-     * Returns whether this is a PJAX request.
-     * @return bool whether this is a PJAX request
-     */
-    public function getIsPjax()
-    {
-        return $this->getIsAjax() && $this->hasHeader('x-pjax');
-    }
+    use RequestTrait;
 }
