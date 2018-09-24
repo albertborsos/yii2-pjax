@@ -79,13 +79,13 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
             ],
             'components' => [
                 'request' => [
-                    '__class' => \albertborsos\pjax\web\Request::class,
+                    'class' => \albertborsos\pjax\web\Request::class,
                     'cookieValidationKey' => 'wefJDF8sfdsfSDefwqdxj9oq',
                     'scriptFile' => __DIR__ . '/index.php',
                     'scriptUrl' => '/index.php',
                 ],
                 'response' => [
-                    '__class' => \albertborsos\pjax\web\Response::class,
+                    'class' => \albertborsos\pjax\web\Response::class,
                 ],
             ],
         ], $config));

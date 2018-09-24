@@ -2,30 +2,27 @@
 
 [![Build Status](https://travis-ci.org/albertborsos/yii2-pjax.svg?branch=master)](https://travis-ci.org/albertborsos/yii2-pjax)
 
-Yii 2.1 pjax extension
+Yii 2.0 pjax extension
 ======================
-Yii 2.0 Pjax widget is deprecated in Yii 2.1
 
-Classes in this extension are copied from Yii 2.0 repository and updated to be compatible with Yii 2.1
+Classes in this extension are copied from Yii 2.0 repository
 
 Installation
 ------------
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Either run
+run
 
 ```
-composer install --prefer-dist albertborsos/yii2-pjax
+composer require --prefer-dist albertborsos/yii2-pjax
 ```
 
-or add
+or for Yii 3.0
 
 ```
-"albertborsos/yii2-pjax": "1.0.x-dev"
+composer require albertborsos/yii2-pjax:1.0.x-dev
 ```
-
-to the require section of your `composer.json` file.
 
 Usage
 -----
@@ -40,10 +37,10 @@ return [
     'components' =>[
         ...
         'request' => [
-            '__class' => \albertborsos\pjax\web\Request::class,
+            'class' => \albertborsos\pjax\web\Request::class,
         ],
         'response' => [
-            '__class' => \albertborsos\pjax\web\Response::class,
+            'class' => \albertborsos\pjax\web\Response::class,
         ],
         ...
     ],

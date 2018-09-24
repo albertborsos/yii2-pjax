@@ -1,6 +1,6 @@
 {
     "name": "albertborsos/yii2-pjax",
-    "description": "pjax extension for Yii 2.1",
+    "description": "pjax extension for Yii 2.0",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
     "license": "MIT",
@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "2.1.x-dev",
+        "yiisoft/yii2": "~2.0.0",
         "npm-asset/yii2-pjax": "~2.0"
     },
     "require-dev": {
@@ -30,7 +30,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-yii3": "1.0.x-dev"
         }
     },
     "repositories": [
