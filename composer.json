@@ -11,6 +11,7 @@
         }
     ],
     "require": {
+        "php": ">=7.1.0",
         "yiisoft/yii2": "~2.0.0",
         "npm-asset/yii2-pjax": "~2.0"
     },

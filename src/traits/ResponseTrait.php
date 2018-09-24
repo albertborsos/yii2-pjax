@@ -24,20 +24,20 @@ trait ResponseTrait
 
         if ($checkAjax) {
             if ($request->getIsAjax()) {
-                if ($request->hasHeader('X-Ie-Redirect-Compatibility') && $statusCode === 302) {
+                if ($request->getHeaders()->has('X-Ie-Redirect-Compatibility') && $statusCode === 302) {
                     // Ajax 302 redirect in IE does not work. Change status code to 200. See https://github.com/yiisoft/yii2/issues/9670
                     $statusCode = 200;
                 }
                 if ($request instanceof RequestInterface && $request->getIsPjax()) {
-                    $this->setHeader('X-Pjax-Url', $url);
+                    $this->getHeaders()->set('X-Pjax-Url', $url);
                 } else {
-                    $this->setHeader('X-Redirect', $url);
+                    $this->getHeaders()->set('X-Redirect', $url);
                 }
             } else {
-                $this->setHeader('Location', $url);
+                $this->getHeaders()->set('Location', $url);
             }
         } else {
-            $this->setHeader('Location', $url);
+            $this->getHeaders()->set('Location', $url);
         }
 
         $this->setStatusCode($statusCode);

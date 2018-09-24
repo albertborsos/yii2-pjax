@@ -170,7 +170,7 @@ class Pjax extends Widget
         $response->setStatusCode(200);
         $response->format = Response::FORMAT_HTML;
         $response->content = $content;
-        $response->setHeader('X-Pjax-Url', Yii::$app->request->url);
+        $response->getHeaders()->set('X-Pjax-Url', Yii::$app->request->url);
         $response->send();
 
         Yii::$app->end();
@@ -182,7 +182,7 @@ class Pjax extends Widget
     protected function requiresPjax()
     {
         $request = Yii::$app->getRequest();
-        return $request->hasHeader('X-Pjax') && explode(' ', $request->getHeader('X-Pjax-Container')[0])[0] === '#' . $this->options['id'];
+        return $request->getHeaders()->has('X-Pjax') && explode(' ', $request->getHeaders()->has('X-Pjax-Container')[0])[0] === '#' . $this->options['id'];
     }
 
     /**

@@ -10,6 +10,6 @@ trait RequestTrait
      */
     public function getIsPjax()
     {
-        return $this->getIsAjax() && $this->hasHeader('x-pjax');
+        return $this->getIsAjax() && $this->getHeaders()->has('x-pjax');
     }
 }
