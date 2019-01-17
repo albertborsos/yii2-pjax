@@ -215,6 +215,10 @@ class Pjax extends Widget
         }
         $options = Json::htmlEncode($this->clientOptions);
         $js = '';
+        if ($this->timeout === false) {
+            $js .= "jQuery('#$id').on('pjax:timeout', function(e) { e.preventDefault(); });";
+            unset($this->clientOptions['timeout']);
+        }
         if ($this->linkSelector !== false) {
             $linkSelector = Json::htmlEncode($this->linkSelector !== null ? $this->linkSelector : '#' . $id . ' a');
             $js .= "jQuery(document).pjax($linkSelector, $options);";
